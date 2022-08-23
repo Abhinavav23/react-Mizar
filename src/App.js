@@ -1,6 +1,7 @@
 
 import { useReducer, useState } from 'react';
 import './App.css';
+import { ReducerExample } from './Components/ReducerExample';
 
 function App() {
   // let name = "abhinav"
@@ -31,12 +32,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div>{name}</div> 
+      <main className="App-header">
+        {/* <div>{name}</div> 
         <div>{2+2}</div>
         <div>classs</div>
-        <button onClick={updateName}>update Name</button>
-      </header>
+        <button onClick={updateName}>update Name</button> */}
+        <ReducerExample/>
+      </main>
     </div>
   );
 }
