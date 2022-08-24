@@ -1,8 +1,12 @@
 
-import { useReducer, useState } from 'react';
+import { createContext, useReducer, useState } from 'react';
 import './App.css';
+import { ParentComp } from './Components/Context APi/ParentComp';
+import { Parent } from './Components/Parent';
 import { ReducerExample } from './Components/ReducerExample';
 
+export const UserContext = createContext(); // 1. creating a conext
+export const AdminContext  = createContext();
 function App() {
   // let name = "abhinav"
   let [name, setName] = useState('abhinav');
@@ -29,15 +33,30 @@ function App() {
   }
 
   console.log('rendering');
+  let user = "User"
 
   return (
     <div className="App">
       <main className="App-header">
+        <h2>App compoennt</h2>
         {/* <div>{name}</div> 
         <div>{2+2}</div>
         <div>classs</div>
         <button onClick={updateName}>update Name</button> */}
-        <ReducerExample/>
+        {/* <ReducerExample/> */}
+
+      
+        {/* <UserContext.Provider value={{name: 'Abhinav', address: 'India'}}>
+          <AdminContext.Provider value={"Administrator"}>
+            <ParentComp name={user}/>
+          </AdminContext.Provider>
+        </UserContext.Provider> */}
+
+
+        {/* <AdminContext.Provider value={"Administrator"}>
+          <Seller/>
+        </AdminContext.Provider> */}
+        <Parent/>
       </main>
     </div>
   );
