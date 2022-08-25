@@ -3,7 +3,8 @@ import { useContext } from 'react'
 import { WinnerContext } from '../../AppV2'
 
 export const Actors = () => {
-   const winnerObj =  useContext(WinnerContext)
+   const winnerObj =  useContext(WinnerContext);
+   console.log('rendering Actors');
   return (
    <>
     <h2>Actors</h2>

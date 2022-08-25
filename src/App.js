@@ -3,6 +3,7 @@ import { createContext, useReducer, useState } from 'react';
 import './App.css';
 import { ParentComp } from './Components/Context APi/ParentComp';
 import { Parent } from './Components/Parent';
+import { ParentPlayer } from './Components/Provider Comp/ParentProvider';
 import { ReducerExample } from './Components/ReducerExample';
 
 export const UserContext = createContext(); // 1. creating a conext
@@ -46,11 +47,13 @@ function App() {
         {/* <ReducerExample/> */}
 
       
-        {/* <UserContext.Provider value={{name: 'Abhinav', address: 'India'}}>
+        <UserContext.Provider value={{name: 'Abhinav', address: 'India'}}>
           <AdminContext.Provider value={"Administrator"}>
             <ParentComp name={user}/>
           </AdminContext.Provider>
-        </UserContext.Provider> */}
+        </UserContext.Provider>
+
+        
 
 
         {/* <AdminContext.Provider value={"Administrator"}>
